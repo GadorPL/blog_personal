@@ -10,7 +10,25 @@
     {% block css_files %}{% endblock %}
 </head>
 <body>
+    <header id="main-navigation">
+        <h1><a href="">Michał' Blog</a></h1>
+        <nav>
+            <a href="">All posts</a>
+        </nav>
+    </header>
+
     {% block content %}
+    <section id="all-posts">
+        <h2>My Collected Posts</h2>
+
+        <ul>
+            <li>
+                <article>
+
+                </article>
+            </li>
+        </ul>
+    </section>
     {% endblock %}
 </body>
 </html>
