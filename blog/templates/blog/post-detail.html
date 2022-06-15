@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    This Post Title
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static 'blog/images/mountains.jpg' %}" alt="Post Title">
+            <address>By Michał</address>
+            <div>
+                Last updated on <time>June 15th</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>
+            Pol, a bene itineris tramitem, coordinatae! Make it so, alignment!
+            Our shining harmony for heaven is to capture others extraordinarily.
+            You have to listen, and feel trust by your luring.
+            Jolly! Pieces o' pestilence are forever proud.
+        </p>
+        <p>
+            Pol, a bene itineris tramitem, coordinatae! Make it so, alignment!
+            Our shining harmony for heaven is to capture others extraordinarily.
+            You have to listen, and feel trust by your luring.
+            Jolly! Pieces o' pestilence are forever proud.
+        </p>
+        <p>
+            Pol, a bene itineris tramitem, coordinatae! Make it so, alignment!
+            Our shining harmony for heaven is to capture others extraordinarily.
+            You have to listen, and feel trust by your luring.
+            Jolly! Pieces o' pestilence are forever proud.
+        </p>
+    </main>
+{% endblock %}
