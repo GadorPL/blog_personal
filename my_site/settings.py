@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from os import getenv
 from pathlib import Path
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('IS_DEVELOPMENT')
+DEBUG = getenv('DEBUG')
 
-ALLOWED_HOSTS = [getenv('HOST')]
+ALLOWED_HOSTS = [getenv('APPHOST')]
 
 
 # Application definition
@@ -79,12 +78,12 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': getenv('DBNAME'),
         'USER': getenv('DBUSER'),
         'PASSWORD': getenv('DBPASSWORD'),
         'HOST': getenv('DBHOST'),
-        'PORT': '5432',
+        'PORT': getenv('DBPORT')
     }
 }
 
